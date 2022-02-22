@@ -5,14 +5,12 @@
 
 var stringifyJSON = function(obj) {
   // your code goes here
-  var result = '';
-
   // check if object
   if (typeof obj === 'object' && !Array.isArray(obj) && obj !== null) {
     console.log(typeof obj, obj);
     if (Object.keys(obj).length === 0) {
       return '{}';
-    } else if (Object.keys(obj) > 0) {
+    } else if (Object.keys(obj).length > 0) {
       var temp = [];
       Object.keys(obj).forEach(function (key) {
         if (typeof obj[key] !== 'function' && obj[key] !== undefined) {
